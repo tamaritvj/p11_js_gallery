@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p11_gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Press Start 2P', cursive;
+            background-color: chartreuse;
+            color: blue;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .container{
+            width: 540px;
+            overflow: auto;
+            margin: 40px auto;
+        }
+        .slider-inner{
+            width: 500px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            padding: 3px;
+            border: 1px solid chartreuse;
+        }
+        .slider-inner img{
+            display: none;
+            width: 500px;
+            height: 300px;
+        }
+        .slider-inner img.active{
+            display: inline-block;
+        }
+        .prev,.next{
+            color: chartreuse;
+            cursor: pointer;
+            margin-top: 130px;
+            padding: 20px;
+            background-color: blue;
+        }
+        .prev{
+            position: absolute;
+            margin-left: -15px;
+            z-index: 100;
+        }
+        .next{
+            position: absolute;
+            margin-left: -80px;
+            z-index: 100;
+        }
+        h2{
+            position: absolute;
+            top: 0;
+            background-color: blue;
+            color: crimson;
+            z-index: 120;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JS Gallery</h1>
+        <div class="slider-outer">
+            <!-- <h2>títol</h2> -->
+            <i class="prev" alt="Prev">prev</i>
+            <div class="slider-inner">
+                <img src="img/img1.jpeg" alt="un" class="active">
+                <img src="img/img2.jpeg" alt="dos">
+                <img src="img/img3.jpeg" alt="tres">
+                <img src="img/img4.jpeg" alt="quatre">
+            </div>
+            <i class="next" alt="Next">next</i>
+        </div>
+    </div>
+</body>
+</html>
